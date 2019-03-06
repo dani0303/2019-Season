@@ -1,0 +1,25 @@
+#include <kipr/botball.h>
+
+int main()
+{
+   
+   while (0) < 100)
+   {
+       if(analog(0) > 207)
+       {
+           motor(0, 1200);
+           motor(1, 1200);
+           msleep(100);
+           
+       }
+       else 
+       {
+           motor(0, 0);
+           motor(1, 0);
+           msleep(100);
+         
+       }
+       counter++;
+       
+    return 0;
+}
