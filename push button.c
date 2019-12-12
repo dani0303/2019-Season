@@ -1,4 +1,4 @@
-#include <kipr/botball,h>
+#include <kipr/botball.h>
  
 int button = 3;
 int r_motor = 0;
@@ -8,21 +8,27 @@ int main()
  
 {
   printf("push the button to execute the robot");
- 
- if(analog(3) == 1)
+ int counter = 0;
+ while(counter < 1)
  {
-     mav(r_motor, 12000);
-     mav(l_motor, 12000);
-     msleep(5000);
-     mav(r_motor, -12000);
-     mav(l_motor, 12000);
-     msleep(1500);
+     if(analog(button) == 0)
+     {
+         mav(r_motor, 12000);
+         mav(l_motor, 12000);
+         msleep(10000);
+     }
+     
+     else
+     {
+         printf("push the button!");
+         
+     }
+     
+     counter+100;
  }
+     
+     
 
- else-if(analog(3) == 0)
- {
-     printf("push the button!");
- }
     return 0;
 }
  
